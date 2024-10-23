@@ -5,7 +5,7 @@ class Card:
     #Represents a playing card with a suit and rank.
     suits = ["♠", "♥", "♦", "♣"]
     ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-
+   
     def __init__(self, suit, rank):
 
         if not (suit in Card.suits and rank in Card.ranks):
@@ -34,7 +34,9 @@ class Card:
             │    {self.rank}│
             └─────┘
             """
-
+    def value(self):
+        return Card.ranks.index(self.rank) + 1
+    
 class Deck:
 
     #Initializes a Deck object with a full deck of 52 cards.
@@ -49,7 +51,12 @@ class Deck:
             print(card.card_str())
     
     def deal(self, num_cards = 1):
-        print(self.cards.pop(0).card_str())#pop removes the card from the deck whilst also letting it
-deck = Deck()#defines the deck function
-deck.shuffle()#shuffles the deck
-deck.deal()#deals a single card from the deck
+        print(self.cards.pop(0).card_str()) #pop removes the card from the deck whilst also letting it
+deck = Deck() #defines the deck function
+deck.shuffle() #shuffles the deck
+deck.deal() #deals a single card from the deck
+print(input("Is the next card higher or lower?"))
+if Card.value > Card.value == higher:
+    else Card.value < Card.value == lower
+
+
